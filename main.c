@@ -17,7 +17,7 @@ int main()
 	scanf("%d", &a);
 	if(a == 1) {
 		printf("Введiть тип завдання (1-2)");
-		scanf("%s", &b);
+		scanf("%d", &b);
 		if(b == 1) {
 			exercOneA();
 		}
