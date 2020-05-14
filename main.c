@@ -8,7 +8,6 @@
 
 int main() 
 {
-
 	setlocale(LC_ALL, "ua");
 	int a;
 	int b;
