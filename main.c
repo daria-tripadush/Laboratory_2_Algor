@@ -13,7 +13,7 @@ int main()
 	int a;
 	int b;
 	
-	printf("Введiть номер завдання: (1-3)");
+	printf("Введiть номер завдання: (1-4)");
 	scanf("%d", &a);
 	if(a == 1) {
 		printf("Введiть тип завдання (1-2)");
@@ -34,6 +34,10 @@ int main()
 	else if(a == 3) {
 		exercThree();
 	}
+	else if (a == 4) {
+		 exerFour();
+	}
+		
 	else {
 		printf("Такого завдання немає");
 	}
@@ -138,5 +142,30 @@ int exercThree() {
 		default: printf("Такого дня немає");break;
 	}
 	printf("\n\n\n");
+	return 0;
+}
+
+
+int exerFour() {
+	int x,y;
+	float f;
+
+	printf("x= ");
+	scanf("%d", &x);
+	printf("y= ");
+	scanf("%d",&y);
+
+	if((x*y) == 0) {
+		printf("Логарифм 0 неможливо!");
+		return 0;
+	}
+	else if((1+pow(x,2)+pow(y,2)) == 0) {
+		printf("Ділення на 0 неможливо!");
+	}
+	else {
+		f = (pow(x,2)+log(x*y)-pow(y,2))/(1+pow(x,2)+pow(y,2));
+	}
+
+	printf("(%d^2+log%d%d-%d^2)/(1+%d^2+%d^2)=%f",x,x,y,y,x,y,f);
 	return 0;
 }
